@@ -38,7 +38,7 @@ jobs:
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         slot-name: staging
-        package: ${{ AZURE_WEBAPP_PACKAGE_PATH }} 
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }} 
     - name: Update deployment status (success)
       if: success()
       uses: chrnorm/deployment-status@releases/v1
